@@ -1,7 +1,5 @@
-<h1>Liste Soirées</h1>
-
-
-<% @soirees.each do |soiree|%>
+ <h1>Votre Soirée</h1>
+ 
  <ul class="list-unstyled"> 
   <li ><%= soiree.nom%></li>
   <li ><%= soiree.date%></li>
@@ -11,6 +9,3 @@
   <li ><%= soiree.lieux%></li>
   
 </ul>
-<%= link_to "Voir la soirée", soiree_path%>
-<% end %>
-
