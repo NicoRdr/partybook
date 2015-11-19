@@ -1,0 +1,15 @@
+<h1>Liste Soirées</h1>
+
+<p>+ Soirée  -Soirée  modif soirée </p>
+<% @soirees.each do |soiree|%>
+ <ul class="list-unstyled"> 
+  <li ><%= soiree.nom%></li>
+  <li ><%= soiree.date%></li>
+  <li ><%= soiree.type_of%></li>
+  <li ><%= soiree.description%></li>
+  <li ><%= soiree.prix %>€</li>
+  <li ><%= soiree.lieux%></li>
+  
+</ul>
+
+<% end %>
