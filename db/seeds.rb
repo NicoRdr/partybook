@@ -78,21 +78,25 @@ Soiree.create( nom: 'Electro',
 @julien = User.create(nom: 'Ente',
               email: 'julien@email.com',
               prenom: 'Julien',
+              organisateur: true,
               password: 'aaaaaaaa' )
               
 @ludivine = User.create(nom: 'Nadalini',
               email: 'ludivine@email.com',
               prenom: 'Ludivine',
+              organisateur: true,
               password: 'aaaaaaaa' )
 
 @celine = User.create(nom: 'Daffe',
               email: 'celine@email.com',
               prenom: 'Céline',
+              organisateur: true,
               password: 'aaaaaaaa' )
 
 @alex = User.create(nom: 'Bodier',
               email: 'alex@email.com',
               prenom: 'Alex',
+              organisateur: true,
               password: 'aaaaaaaa' )
 
 
