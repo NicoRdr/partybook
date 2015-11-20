@@ -5,18 +5,21 @@ class SoireeController < ApplicationController
     @soirees = Soiree.all
   end
 
-  def show
-
+  def create
+    @soiree = Soiree.create(soiree_params)
   end
+  
+
+ 
 
   # private
   #   # Use callbacks to share common setup or constraints between actions.
   #   def set_soiree
-  #     @soiree= soiree.find(params[:id])
+  #     @soiree= Soiree.find(params[:id])
   #   end
 
-    # # Never trust parameters from the scary internet, only allow the white list through.
-    # def soiree_params
-    #   params.require(:soiree).permit(:user_id, :soiree_id, :create, :destroy, :show)
-    # end
+  #   # Never trust parameters from the scary internet, only allow the white list through.
+  #   def soiree_params
+  #     params.require(:soiree).permit(:user_id, :soiree_id, :create, :destroy, :show)
+  #   end
 end
