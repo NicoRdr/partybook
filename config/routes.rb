@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   #get 'utilisateur' => 'utilisateur#index', as: :utilisateur  
   get '/users/sign_out' => "splash#index"
   get 'soiree' => 'soiree#show'
+  get 'organisateur' => 'soiree#create'
 
   devise_for :users
   resources :users

@@ -12,6 +12,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def create
+    @user = User.create(user_params)
+  end
+
+
   # def destroy
   #   @user.destroy
   #   respond_to do |format|
