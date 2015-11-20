@@ -1,0 +1,44 @@
+<div class="authform">
+  <%= form_for(resource, :as => resource_name, :url => soiree_path(resource_name), :html => { :role => 'form'}) do |f| %>
+    <h3>Créer la soirée</h3>
+    <%= devise_error_messages! %>
+
+   <div class="form-group">
+      <%= f.label :nom %>
+      <%= f.text_field :nom, :autofocus => true, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :date %>
+      <%= f.email_field :date, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :type_of%>
+      <%= f.text_field :type_of, :autofocus => true, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_field :description, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :lieux%>
+      <%= f.text_field :lieux, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :prix%>
+      <%= f.text_field :prix, class: 'form-control' %>
+    </div>
+    
+    <div class="form-group">
+      <%= f.label :place%>
+      <%= f.text_field :place, class: 'form-control' %>
+    </div>
+    
+    
+     <%= f.submit 'Créer soirée', :class => 'button right' %>
+  <% end %>
+</div>
