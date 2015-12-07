@@ -11,7 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151119110539) do
+ActiveRecord::Schema.define(version: 20151119230742) do
+
+  create_table "organisateurs", force: :cascade do |t|
+    t.string   "nom"
+    t.string   "prenom"
+    t.integer  "soiree_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "soiree_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "soirees", force: :cascade do |t|
+    t.string   "nom"
+    t.text     "description"
+    t.integer  "place"
+    t.integer  "prix"
+    t.string   "lieux"
+    t.string   "type_of"
+    t.integer  "user_id"
+    t.integer  "organisateur_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.date     "date"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -26,7 +55,10 @@ ActiveRecord::Schema.define(version: 20151119110539) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "name"
+    t.string   "nom"
+    t.string   "prenom"
+    t.integer  "soiree_id"
+    t.boolean  "organisateur"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

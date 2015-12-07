@@ -12,4 +12,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def create
+    @user = User.create(user_params)
+  end
+
+
+  # def destroy
+  #   @user.destroy
+  #   respond_to do |format|
+  #     flash[:success] = 'Todo was successfully destroyed.'
+  #     format.html { redirect_to root_path, notice: 'Post was successfully destroyed.' }
+  #     format.json { head :no_content }
+  #   end
+  # end
+
 end

@@ -1,0 +1,2 @@
+module SoireeHelper
+end

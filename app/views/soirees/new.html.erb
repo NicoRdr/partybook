@@ -1,0 +1,42 @@
+    <h3>Créer la soirée</h3>
+  <%= form_for(@soiree) do |f| %>
+
+   <div class="form-group">
+      <%= f.label :nom %>
+      <%= f.text_field :nom, :autofocus => true, class: 'form-control' %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :date %>
+      <%= f.date_select :date, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :type_of%>
+      <%= f.text_field :type_of, :autofocus => true, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_field :description, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :lieux%>
+      <%= f.text_field :lieux, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :prix%>
+      <%= f.text_field :prix, class: 'form-control' %>
+    </div>
+    
+    <div class="form-group">
+      <%= f.label :place%>
+      <%= f.text_field :place, class: 'form-control' %>
+    </div>
+    
+    
+     <%= f.submit 'créer soiree', :class => 'button right' %>
+  <% end %>

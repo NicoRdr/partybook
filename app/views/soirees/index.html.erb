@@ -1,0 +1,32 @@
+<h1>Liste Soirées
+<%= @soirees.count %>
+</h1>
+
+
+<% if current_user.organisateur == true %>
+ <a href="/soirees/new" class="btn btn-info">créer soirée new</a>
+<% end %>
+
+<br>
+<br>
+
+<% @soirees.each do |soiree|%>
+  <div class="panel panel-primary">
+   <ul class="list-unstyled"> 
+    <li ><%= soiree.nom%></li>
+    <li ><%= soiree.date%></li>
+    <li ><%= soiree.type_of%></li>
+    <li ><%= soiree.description%></li>
+    <li ><%= soiree.prix %>€</li>
+    <li ><%= soiree.lieux%></li>
+    <li ><%= soiree.id%></li>
+  </ul>
+</div>
+<%= link_to "Voir la soirée", soiree_path(soiree.id), class: "btn btn-default"%>
+<%= link_to "Supprimer", soiree_path(soiree.id), method: :delete, class: "btn btn-danger"%>
+<br>
+<br>
+<hr>
+<% end %>
+
+
