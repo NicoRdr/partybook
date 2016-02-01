@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/NicoRdr/partybook.png?label=ready&title=Ready)](https://waffle.io/NicoRdr/partybook)
 Partybook
 ================
 
